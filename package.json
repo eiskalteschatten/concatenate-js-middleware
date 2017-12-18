@@ -13,7 +13,8 @@
   "keywords": [
     "javascript",
     "concatenation",
-    "minification"
+    "minification",
+    "minify"
   ],
   "author": "Alex Seifert",
   "license": "MIT",
