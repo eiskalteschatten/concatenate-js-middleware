@@ -1,0 +1,27 @@
+{
+  "name": "concatenate-js-middleware",
+  "version": "0.0.1",
+  "description": "A module to concatenate JavaScript files on-the-fly or to save them to disk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eiskalteschatten/concatenate-js-middleware.git"
+  },
+  "keywords": [
+    "javascript",
+    "concatenation",
+    "minification"
+  ],
+  "author": "Alex Seifert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eiskalteschatten/concatenate-js-middleware/issues"
+  },
+  "homepage": "https://github.com/eiskalteschatten/concatenate-js-middleware#readme",
+  "dependencies": {
+    "uglify-js": "^3.2.2"
+  }
+}
