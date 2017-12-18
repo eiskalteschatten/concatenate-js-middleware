@@ -16,11 +16,10 @@ npm install --save concatenate-js-middleware
 
 ## Config
 
-In order to concatenate your JavaScript files, you will need to configure which JavaScript files will be concatenated into which files. In the example below, we have two final JavaScript files: "libs.js" and "scripts.js".
+In order to concatenate your JavaScript files, you will need to configure which JavaScript files will be concatenated into which files. In the example below, we have two final JavaScript files: "libs.js" and "scripts.js":
 
-"libs.js" contains the files "../../node_modules/jquery/dist/jquery.min.js" and "other/lib.js".
-
-"script.js" contains the files "../public/js/homepage.js" and "../public/js/anotherFile.js".
+- "libs.js" contains the files "../../node_modules/jquery/dist/jquery.min.js" and "other/lib.js".
+- "script.js" contains the files "../public/js/homepage.js" and "../public/js/anotherFile.js".
 
 **jsConfig.js**
 
@@ -86,7 +85,7 @@ Returns the concatenated JavaScript as a string.
 const concatenateJs = require('concatenate-js-middleware');
 const jsConfig = require('./config/jsConfig.js');
 
-concatenateJs.concatenateJs(jsConfig['libs']).then(...).catch(...);
+const jsString = concatenateJs.concatenateJs(jsConfig['libs']).then(...).catch(...);
 ```
 
 ### concatenateJsAndSave()
