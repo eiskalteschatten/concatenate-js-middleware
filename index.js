@@ -114,18 +114,26 @@ function concatenateJsAndSaveMultiple(options) {
     options.minify = true;
   }
 
-  options.files.forEach(toConcatenateFile => {
-    const newOptions = {
-      originPath: options.originPath,
-      destinationPath: options.destinationPath,
-      file: toConcatenateFile,
-      minify: options.minify,
-      config: options.config
-    };
+  return new Promise((resolve, reject) => {
+    options.files.forEach(toConcatenateFile => {
+      const newOptions = {
+        originPath: options.originPath,
+        destinationPath: options.destinationPath,
+        file: toConcatenateFile,
+        minify: options.minify,
+        config: options.config
+      };
 
-    concatenateJsAndSave(newOptions).then(jsFile => {
-      console.log('Created', jsFile);
-    }).catch(console.error);
+      concatenateJsAndSave(newOptions).then(jsFile => {
+        console.log('Created', jsFile);
+      }).catch(error => {
+        reject(error);
+      });
+    });
+
+    resolve();
+  }).catch(error => {
+    throw new Error(error);
   });
 }
 

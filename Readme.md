@@ -71,7 +71,7 @@ concatenateJs.concatenateJsAndSaveMultiple({
   files: ['libs.js'],
   minify: true,
   config: jsConfig
-});
+}).then(...).catch(...);
 ```
 
 
