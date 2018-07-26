@@ -80,7 +80,7 @@ function concatenateJsAndSave(options) {
   return concatenateJs(options.config[type]).then(code => {
     if (options.minify) {
       const minified = uglify.minify(code).code;
-      code = typeof minified !== undefined ? minified : code;
+      code = typeof minified !== 'undefined' ? minified : code;
     }
 
     return code;
